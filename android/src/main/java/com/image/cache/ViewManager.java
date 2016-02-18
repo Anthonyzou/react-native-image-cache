@@ -14,8 +14,6 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import javax.annotation.Nullable;
 
-import uk.co.senab.photoview.PhotoView;
-
 /**
  * Created by azou on 15/02/16.
  */
@@ -35,7 +33,7 @@ public class ViewManager extends SimpleViewManager<ImageView> {
 
     @Override
     public ImageView createViewInstance(ThemedReactContext reactContext) {
-        imageView = new PhotoView(reactContext);
+        imageView = new ImageView(reactContext);
         return imageView;
     }
 

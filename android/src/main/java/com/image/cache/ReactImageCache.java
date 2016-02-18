@@ -20,7 +20,7 @@ import java.util.List;
  *
  * Created by ywu on 15/9/23.
  */
-public class ReactImageZoom implements ReactPackage {
+public class ReactImageCache implements ReactPackage {
 
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactApplicationContext) {

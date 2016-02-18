@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-cache",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "React Native wrappers for PhotoView and Picasso",
   "main": "index.js",
   "scripts": {

@@ -6,22 +6,22 @@
 Installation
 ------------
 
-Install the npm package [`react-native-image-zoom`](https://www.npmjs.com/package/react-native-image-zoom). Inside your React Native project, run ([example](https://github.com/aakashns/react-native-image-zoom-example/commit/a1c2de9c208a834fcf8fef6dbc736c370293ce7a)):
+Install the npm package [`react-native-image-cache`](https://www.npmjs.com/package/react-native-image-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-image-cache/tree/master/example)):
 ```bash
-npm install --save react-native-image-zoom
+npm install --save react-native-image-cache
 ```
 
 In `android/settings.gradle`, remove the line `include ':app'` and add the following lines
 ```
-include :react-native-image-zoom'
-project(':react-native-image-zoom').projectDir = file('../node_modules/react-native-image-zoom/android')
+include :react-native-image-cache'
+project(':react-native-image-cache').projectDir = file('../node_modules/react-native-image-cache/android')
 ```
 **NOTE** : If you have included other libraries in your project, the `include` line will contain the other dependencies too.
 
-In `android/app/build.gradle`, add a dependency to `':react-native-image-zoom'`
+In `android/app/build.gradle`, add a dependency to `':react-native-image-cache'`
 ```
 dependencies {
-    compile project(':react-native-image-zoom')
+    compile project(':react-native-image-cache')
 }
 ```
 

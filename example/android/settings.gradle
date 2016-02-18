@@ -1,5 +1,5 @@
 rootProject.name = 'example'
 
 include ':app'
-include ':react-native-zoomable'
-project(':react-native-zoomable').projectDir = file('../node_modules/react-native-image-zoom/android')
+include ':react-native-cache'
+project(':react-native-cache').projectDir = file('../node_modules/react-native-image-cache/android')

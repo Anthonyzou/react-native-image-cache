@@ -1,0 +1,24 @@
+{
+  "name": "react-native-image-cache",
+  "version": "0.0.4",
+  "description": "React Native wrappers for PhotoView and Picasso",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anthonyzou/react-native-image-cache.git"
+  },
+  "keywords": [
+    "react-native",
+    "android",
+    "react-component"
+  ],
+  "author": "Anthony Ou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anthonyzou/react-native-image-cache/issues"
+  },
+  "homepage": "https://github.com/Anthonyzou/react-native-image-cache#readme"
+}

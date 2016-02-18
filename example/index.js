@@ -14,7 +14,7 @@ import React, {
   // Image,
 } from 'react-native';
 
-import Image from 'react-native-image-zoom'
+import Image from 'react-native-image-cache'
 import {Actions, Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux'
 class Example extends Component {
   constructor(a,b){

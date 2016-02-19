@@ -63,4 +63,18 @@ public class ViewManager extends SimpleViewManager<ImageView> {
         });
     }
 
+    @ReactProp(name = "tintColor", customType = "Color")
+    public void setTintColor(ImageView view, @Nullable Integer tintColor) {
+        if (tintColor == null) {
+            view.clearColorFilter();
+        } else {
+            view.setColorFilter(tintColor);
+        }
+
+    }
+
+    @ReactProp(name = "resizeMode")
+    public void setScaleType(ImageView view, @Nullable String mode) {
+        view.setScaleType(ImageView.ScaleType.valueOf(mode));
+    }
 }

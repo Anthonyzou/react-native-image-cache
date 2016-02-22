@@ -28,7 +28,7 @@ class Example extends Component {
       <View style={styles.container}>
         <Text>Image cache example</Text>
         <TextInput onChangeText={(text) => this.setState({text:text})} value={this.state.text}></TextInput>
-        <Image style={styles.image} src={this.state.text}></Image>
+        <Image borderRadius={2} style={styles.image} src={this.state.text}></Image>
       </View>
     );
   }

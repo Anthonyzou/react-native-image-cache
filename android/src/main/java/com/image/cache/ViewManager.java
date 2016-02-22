@@ -9,6 +9,7 @@ import com.bumptech.glide.request.target.Target;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import javax.annotation.Nullable;
 
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
  * Created by azou on 15/02/16.
  */
 public class ViewManager extends SimpleViewManager<ImageView> {
-    ImageView imageView;
+    RoundedImageView imageView;
 
     public ViewManager() {
     }
@@ -29,13 +30,13 @@ public class ViewManager extends SimpleViewManager<ImageView> {
 
     @Override
     public ImageView createViewInstance(ThemedReactContext reactContext) {
-        imageView = new ImageView(reactContext);
+        imageView = new RoundedImageView(reactContext);
         return imageView;
     }
 
     // In JS this is Image.props.source.uri
     @ReactProp(name = "src")
-    public void setSource(ImageView view, @Nullable String source) {
+    public void setSource(RoundedImageView view, @Nullable String source) {
         Glide
             .with(view.getContext())
             .load(source)
@@ -54,8 +55,14 @@ public class ViewManager extends SimpleViewManager<ImageView> {
         ;
     }
 
+    @ReactProp(name = "borderRadius")
+    public void setBorderRadius(RoundedImageView view, float borderRadius) {
+        borderRadius *= 10;
+        view.setCornerRadius(borderRadius);
+    }
+
     @ReactProp(name = "tintColor", customType = "Color")
-    public void setTintColor(ImageView view, @Nullable Integer tintColor) {
+    public void setTintColor(RoundedImageView view, @Nullable Integer tintColor) {
         if (tintColor == null) {
             view.clearColorFilter();
         } else {

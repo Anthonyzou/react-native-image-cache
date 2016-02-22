@@ -11,6 +11,7 @@ export default class ImageViewCache extends Component {
     ...View.propTypes,
     src: PropTypes.string,
     resizeMode : React.PropTypes.oneOf(["MATRIX","FIT_XY","FIT_START","FIT_CENTER","FIT_END","CENTER","CENTER_CROP","CENTER_INSIDE"]),
+    oval: PropTypes.bool,
   };
 
   constructor(props) {

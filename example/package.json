@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "react-native": "^0.20.0",
-    "react-native-image-cache": "https://github.com/Anthonyzou/react-native-image-cache/tarball/7600537453fa48f6ddc1282f3ebed83997b2d5e1",
+    "react-native-image-cache": "*",
     "react-native-router-flux": "^2.2.6"
   }
 }

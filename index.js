@@ -10,7 +10,7 @@ export default class ImageViewCache extends Component {
   static propTypes = {
     ...View.propTypes,
     src: PropTypes.string,
-    resizeMode : PropTypes.string,
+    resizeMode : React.PropTypes.oneOf(["MATRIX","FIT_XY","FIT_START","FIT_CENTER","FIT_END","CENTER","CENTER_CROP","CENTER_INSIDE"]),
   };
 
   constructor(props) {
@@ -19,7 +19,6 @@ export default class ImageViewCache extends Component {
   }
 
   setNativeProps(nativeProps) {
-    this._root.setNativeProps(nativeProps);
   }
 
   _onChange(event: Event) {
@@ -35,7 +34,7 @@ const ImageCacheView = requireNativeComponent('ImageViewCache', ImageViewCache, 
   nativeOnly: {onChange: true}
 });
 
-export const resizeModes= {
+export const resizeModes = {
   /**
    * Scale using the image matrix when drawing. The image matrix can be set using
    * {@link ImageView#setImageMatrix(Matrix)}. From XML, use this syntax:

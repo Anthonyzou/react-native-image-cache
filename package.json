@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-cache",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React Native wrappers for universal-image-loader and ImageView",
   "main": "index.js",
   "scripts": {

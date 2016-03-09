@@ -16,18 +16,17 @@ export default class ImageViewCache extends Component {
 
   constructor(props) {
     super(props);
-    this._onChange = this._onChange.bind(this);
   }
 
   setNativeProps(nativeProps) {
   }
 
   _onChange(event: Event) {
-    this.props.onLoadComplete && this.props.onLoadComplete(event.nativeEvent.value);
+    console.log(event)
   }
 
   render() {
-    return <ImageCacheView {...this.props} />;
+    return <ImageCacheView onChange={this._onChange} {...this.props} />;
   }
 }
 

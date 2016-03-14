@@ -1,4 +1,4 @@
-# React image caching for Android
+# Image caching for Android
 
 This is still very basic since I am quite new to React. There is plenty of room for improvment by adding
 additional react bindings for props and callbacks.
@@ -16,15 +16,18 @@ Installation
 ------------
 
 Install the npm package [`react-native-image-cache`](https://www.npmjs.com/package/react-native-image-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-image-cache/tree/master/example)):
+
 ```bash
 npm install --save react-native-image-cache
 ```
 
-In `android/settings.gradle`, remove the line `include ':app'` and add the following lines
+In `android/settings.gradle` add the following lines
+
 ```
 include :react-native-image-cache'
 project(':react-native-image-cache').projectDir = file('../node_modules/react-native-image-cache/android')
 ```
+
 **NOTE** : If you have included other libraries in your project, the `include` line will contain the other dependencies too.
 
 In `android/app/build.gradle`, add a dependency to `':react-native-image-cache'`
@@ -34,7 +37,7 @@ dependencies {
 }
 ```
 
-Next, you need to change the `MainActivity` of your app to register `ReactNativeDialogsPackage` :
+Next, you need to change the `MainActivity` of your app to register `ReactImageCache` :
 ```java
 import com.image.cache.ReactImageCache; // add this import
 

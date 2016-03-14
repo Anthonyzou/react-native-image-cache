@@ -11,16 +11,16 @@ import React, {
   View,
   Dimensions,
   TextInput,
-  // Image,
+  ToastAndroid,
 } from 'react-native';
 
-import Image from 'react-native-image-cache'
+import Image from './cache'
 import {Actions, Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux'
 class Example extends Component {
   constructor(a,b){
     super(a,b)
     this.state = {
-      text:'http://placehold.it/100'
+      text:'http://placehold.it/400'
     }
   }
   render() {
@@ -28,7 +28,10 @@ class Example extends Component {
       <View style={styles.container}>
         <Text>Image cache example</Text>
         <TextInput onChangeText={(text) => this.setState({text:text})} value={this.state.text}></TextInput>
-        <Image borderRadius={2} style={styles.image} src={this.state.text}></Image>
+        <Image onLoad={()=>{
+
+          ToastAndroid.show(`OnLoad ${this.state.text}`, ToastAndroid.LONG)
+        }} borderRadius={2} style={styles.image} src={this.state.text}></Image>
       </View>
     );
   }

@@ -22,11 +22,11 @@ export default class ImageViewCache extends Component {
   }
 
   _onChange(event: Event) {
-    console.log(event)
+    (this.props.onLoad && this.props.onLoad(event))
   }
 
   render() {
-    return <ImageCacheView onChange={this._onChange} {...this.props} />;
+    return <ImageCacheView onChange={this._onChange.bind(this)} {...this.props} />;
   }
 }
 

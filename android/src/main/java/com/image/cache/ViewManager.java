@@ -1,6 +1,7 @@
 package com.image.cache;
 
 import android.os.SystemClock;
+import android.util.SparseArray;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -23,8 +24,8 @@ import javax.annotation.Nullable;
  * Created by azou on 15/02/16.
  */
 public class ViewManager extends SimpleViewManager<ImageView> {
-    RoundedImageView imageView;
     private EventDispatcher mEventDispatcher;
+    private SparseArray<Float> scales = new SparseArray<>();
 
     public ViewManager() {
     }
@@ -37,7 +38,7 @@ public class ViewManager extends SimpleViewManager<ImageView> {
 
     @Override
     public ImageView createViewInstance(ThemedReactContext reactContext) {
-        imageView = new RoundedImageView(reactContext);
+        RoundedImageView imageView = new RoundedImageView(reactContext);
         mEventDispatcher = reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
         return imageView;
     }
@@ -60,10 +61,15 @@ public class ViewManager extends SimpleViewManager<ImageView> {
                     mEventDispatcher.dispatchEvent(
                             new ImageEvent(view.getId(), SystemClock.uptimeMillis(), ImageEvent.ON_LOAD)
                     );
+                    Float scale = scales.get(view.getId());
+                    if(scale != null){
+                        view.setScaleX(scale);
+                        view.setScaleY(scale);
+                    }
                     return false;
                 }
             })
-            .into(imageView)
+            .into(view)
         ;
     }
 
@@ -80,6 +86,13 @@ public class ViewManager extends SimpleViewManager<ImageView> {
             view.setColorFilter(tintColor);
         }
 
+    }
+
+    @ReactProp(name = "scale")
+    public void setScale(ImageView view, @Nullable float scale) {
+        scales.put(view.getId(), scale);
+        view.setScaleX(scale);
+        view.setScaleY(scale);
     }
 
     @ReactProp(name = "resizeMode")

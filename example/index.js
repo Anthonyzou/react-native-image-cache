@@ -14,8 +14,9 @@ import React, {
   ToastAndroid,
 } from 'react-native';
 
-import Image from './cache'
+import Image from 'react-native-image-cache'
 import {Actions, Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux'
+
 class Example extends Component {
   constructor(a,b){
     super(a,b)

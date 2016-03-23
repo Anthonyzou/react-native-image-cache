@@ -3,13 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-
-    "setupDev" : "rm -rf node_modules/react-native-image-cache/android node_modules/react-native-image-cache/index.js ; ln -s  ../../../android/ node_modules/react-native-image-cache/android; ln -s  ../../../index.js node_modules/react-native-image-cache/index.js"
+    "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react-native": "^0.20.0",
-    "react-native-image-cache": "*",
+    "react-native": "^0.22.2",
+    "react-native-image-cache": "../.",
     "react-native-router-flux": "^2.2.6"
   }
 }

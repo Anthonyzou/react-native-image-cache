@@ -1,13 +1,23 @@
 # Image caching for Android
 
-This is still very basic since I am quite new to React. There is plenty of room for improvment by adding
-additional react bindings for props and callbacks.
-
 ##### Props:
 | Property | Type | Default | Description |
 |---------------|----------|--------------|----------------------------------------------------------------|
 | src | string | null | http source of the image |
 | tintColor | string | null | optional tintColor |
+| onLoad | function | null | optional onLoad function |
+| borderRadius | number | null | optional borderRadius number |
+
+
+## Example
+```jsx
+import Image from 'react-native-image-cache'
+
+
+<Image onLoad={()=>{
+  ToastAndroid.show(`OnLoad`, ToastAndroid.LONG)
+}} borderRadius={2} style={styles.image} src={"http://placehold.it/500"}></Image>
+```
 
 ## Include in your App
 

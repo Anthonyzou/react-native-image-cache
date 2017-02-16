@@ -25,7 +25,7 @@ import Image from 'react-native-image-cache'
 Installation
 ------------
 
-Install the npm package [`react-native-image-cache`](https://www.npmjs.com/package/react-native-image-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-image-cache/tree/master/example)):
+Install the npm package [`react-native-img-cache`](https://www.npmjs.com/package/react-native-image-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-image-cache/tree/master/example)):
 
 ```bash
 npm install --save react-native-image-cache

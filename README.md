@@ -11,7 +11,7 @@
 
 ## Example
 ```jsx
-import Image from 'react-native-image-cache'
+import Image from 'react-native-img-cache'
 
 
 <Image onLoad={()=>{
@@ -25,25 +25,25 @@ import Image from 'react-native-image-cache'
 Installation
 ------------
 
-Install the npm package [`react-native-image-cache`](https://www.npmjs.com/package/react-native-image-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-image-cache/tree/master/example)):
+Install the npm package [`react-native-img-cache`](https://www.npmjs.com/package/react-native-img-cache). Inside your React Native project, run ([example](https://github.com/Anthonyzou/react-native-img-cache/tree/master/example)):
 
 ```bash
-npm install --save react-native-image-cache
+npm install --save react-native-img-cache
 ```
 
 In `android/settings.gradle` add the following lines
 
 ```
-include :react-native-image-cache'
-project(':react-native-image-cache').projectDir = file('../node_modules/react-native-image-cache/android')
+include :react-native-img-cache'
+project(':react-native-img-cache').projectDir = file('../node_modules/react-native-img-cache/android')
 ```
 
 **NOTE** : If you have included other libraries in your project, the `include` line will contain the other dependencies too.
 
-In `android/app/build.gradle`, add a dependency to `':react-native-image-cache'`
+In `android/app/build.gradle`, add a dependency to `':react-native-img-cache'`
 ```
 dependencies {
-    compile project(':react-native-image-cache')
+    compile project(':react-native-img-cache')
 }
 ```
 
